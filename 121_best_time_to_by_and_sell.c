@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int maxProfit(int* prices, int pricesSize) {
-    // If there are fewer than 2 prices, no transaction can be made
+    //  if less than 2 prices, we cannot make any profit
     if (pricesSize < 2) {
         return 0;
     }
@@ -10,7 +10,7 @@ int maxProfit(int* prices, int pricesSize) {
     int max_profit = 0;
     
     for (int i = 1; i < pricesSize; i++) {
-        // If we find a lower buying price, update min_price
+        // If we find a lower buying price, just update min_price
         if (prices[i] < min_price) {
             min_price = prices[i];
         } 
